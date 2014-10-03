@@ -1,3 +1,8 @@
+" Load bundles using pathogen
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+
 " General
 set history=700
 filetype on
@@ -13,6 +18,8 @@ set noerrorbells
 set novisualbell
 
 " Colors & Fonts
+syntax on
+set background=dark
 colorscheme elflord
 set encoding=utf8
 set ffs=unix,mac,dos
@@ -24,3 +31,20 @@ set lbr
 set tw=500
 set ai " Auto indent
 set wrap " Wrap lines
+
+" Key mappings
+let mapleader=","
+
+" Settings for pymode
+let g:pymode_options_max_line_length = 80
+
+" -----------------------------------------------------------------------------
+"  bundles
+" ----------------------------------------------------------------------------
+" Bundle: https://github.com/bronson/vim-trailing-whitespace.git
+" Bundle: https://github.com/vim-scripts/jQuery.git
+" Bundle: https://github.com/scrooloose/nerdtree
+" Bundle: https://github.com/pangloss/vim-javascript.git
+" Bundle: https://github.com/klen/python-mode
+" Bundle: https://github.com/terryma/vim-multiple-cursors
+" Bundle: https://github.com/bling/vim-airline
