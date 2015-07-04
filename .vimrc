@@ -31,6 +31,9 @@ set lbr
 set tw=500
 set ai " Auto indent
 set wrap " Wrap lines
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " Key mappings
 let mapleader=","
