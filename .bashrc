@@ -1,73 +1,46 @@
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+# Aliases
+alias ls='ls -lG'
+alias vim='mvim'
+alias start_collage="cd ~/Vagrants/scrapwalls && vagrant halt -f && vagrant up && vagrant ssh -c 'cd /vagrant && nmp start'"
+alias stop_collage="cd ~/Vagrants/scrapwalls && vagrant halt -f"
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+# My scripts directory
+export PATH="/Users/ethan/ethan-bin:$PATH"
+echo "setting up"
+# XCode
+export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin:$PATH"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+# Git
+# export PATH="/usr/local/git/bin:$PATH"
+
+# MySQL
+export PATH="/usr/local/mysql/bin:$PATH"
+
+# Stylus
+export PATH="/Users/ethan/packages/npm/node_modules/stylus/bin:$PATH"
+
+# For Brew installed PHP 5.4
+export PATH="$(brew --prefix homebrew/php/php54)/bin:$PATH"
+
+# For Brew
+export PATH="/usr/local/sbin:$PATH"
+
+# For Ruby & Ruby on Rails
+eval "$(rbenv init -)"
+
+# For VirtualBox
+export PATH="$PATH:/Applications/VirtualBox.app/Contents/MacOS"
+
+# PATH setting
+export PATH=$PATH:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/share/npm/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin
+
+# For GIT autocompletion
+if [ -f ~/.git-completion.bash ]; then
+	  . ~/.git-completion.bash
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-	xterm-color) color_prompt=yes;;
-esac
+# configure prompt
+PS1="\d \u@\h:\w $ "
 
-# uncomment for a colored prompt, i the terminal has the ability; turned
-# off by default to avoid distractions.
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-	if [ -x /usr/bin/tput ] && tput setaf 1>&/dev/null; then
-		# We have color support; assume that it is compliant
-		# with ECMA-48 (ISO/IEC-6429). 
-		color_prompt=yes
-	else
-		color_prompt=
-	fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-	;;
-*)
-    ;;
-esac
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-	. /etc/bash_completion
-fi
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
-
-# For my local bin setup
-export PATH=$HOME/local/bin:$PATH
-
+# added by travis gem
+[ -f /Users/ethan/.travis/travis.sh ] && source /Users/ethan/.travis/travis.sh
