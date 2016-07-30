@@ -35,7 +35,7 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'tpope/vim-repeat'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
-Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'oblitum/rainbow'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-surround'
 
@@ -56,8 +56,12 @@ filetype plugin indent on
 
 " Font
 if has('gui_running')
-  set guifont=Inconsolata:h18
+  set guifont=Operator\ Mono\ Book:h18
 endif
+highlight Comment gui=italic
+highlight Comment cterm=italic
+highlight htmlArg gui=italic
+highlight htmlArg cterm=italic
 
 " Setup base16 colorscheme
 set background=dark
@@ -112,6 +116,25 @@ let NERDTreeQuitOnOpen = 1
 :let g:ctrlp_dotfiles = 0
 :let g:ctrlp_switch_buffer = 0
 
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
+
+" Use ag for :grep searches where possible, and then use it for CtrlP.
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor\ --column
+  set grepformat=%f:%l:%c%m
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 " Rainbow parentheses options
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 1
+let g:rainbow_active = 1
+
+" Get ack.vim to use 'ag'
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
