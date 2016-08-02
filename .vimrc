@@ -1,9 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.config/nvim/bundle/Vundle.vim/
+call vundle#begin('~/.config/nvim/bundle/')
+
 " alternatively, pass a path where Vundle should install plugins
 " call vundle#begin('~/some/path/here')
 "
@@ -55,17 +55,11 @@ syntax on
 filetype plugin indent on
 
 " Font
-if has('gui_running')
-  set guifont=Operator\ Mono\ Book:h18
-endif
+set guifont=Operator\ Mono\ Book:h18
 highlight Comment gui=italic
 highlight Comment cterm=italic
 highlight htmlArg gui=italic
 highlight htmlArg cterm=italic
-
-" Setup base16 colorscheme
-set background=dark
-colorscheme base16-chalk
 
 " Toggles
 :nmap \l :setlocal number!<CR>
@@ -101,7 +95,6 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 " Activate mouse in vim
 set ttyfast
 set mouse=a
-set ttymouse=xterm2
 
 " NERDTree
 nmap <silent> <C-T> :NERDTreeToggle<CR>
@@ -111,7 +104,7 @@ let NERDTreeQuitOnOpen = 1
 " :let g:ctrlp_map = '<Leader>t'
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
-:let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+" :let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 :let g:ctrlp_working_path_mode = 0
 :let g:ctrlp_dotfiles = 0
 :let g:ctrlp_switch_buffer = 0
@@ -129,7 +122,7 @@ if executable('ag')
   set grepformat=%f:%l:%c%m
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  :let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 " Rainbow parentheses options
