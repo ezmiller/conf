@@ -20,6 +20,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'easymotion/vim-easymotion'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -99,6 +101,17 @@ set mouse=a
 " NERDTree
 nmap <silent> <C-T> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
+
+" Settings for vim-easymotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-overwin-f)
+let g:EasyMotion_smartcase = 1 " Case insensitive feature
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 " Settings for Ctrl-P plugin
 " :let g:ctrlp_map = '<Leader>t'
