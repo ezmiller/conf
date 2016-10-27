@@ -27,9 +27,6 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
-" Color scheme
-Plugin 'chriskempson/base16-vim'
-
 " Clojure
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-sexp'
