@@ -53,13 +53,6 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
-" Font
-set guifont=Operator\ Mono\ Book:h18
-highlight Comment gui=italic
-highlight Comment cterm=italic
-highlight htmlArg gui=italic
-highlight htmlArg cterm=italic
-
 " Toggles
 :nmap \l :setlocal number!<CR>
 :nmap \o :set paste!<CR>
