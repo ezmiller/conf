@@ -66,6 +66,9 @@ filetype plugin indent on
 :set noswapfile
 :set showcmd            " Show partial command in status line
 
+" Fonts
+highlight Comment cterm=italic
+
 " Clojure Defaults
 let g:clojure_align_multiline_strings = 1
 
