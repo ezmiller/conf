@@ -49,7 +49,7 @@ Plugin 'ternjs/tern_for_vim'
 
 " Markdown
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 " All Plugins must be added before this line.
 call vundle#end()
@@ -98,6 +98,8 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 set ttyfast
 set mouse=a
 
+" Settings for vim-markdown-preview
+let vim_markdown_preview_github=1 
 " NERDTree
 nmap <silent> <C-T> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
