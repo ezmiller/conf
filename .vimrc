@@ -37,7 +37,7 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'tpope/vim-repeat'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
-Plugin 'oblitum/rainbow'
+Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-classpath'
 Plugin 'tpope/vim-surround'
 
