@@ -91,6 +91,15 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 set ttyfast
 set mouse=a
 
+" Link clipboard to main buffer
+set clipboard=unnamed
+
+" Shortcuts for vim tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
 " Settings for vim-markdown-preview
 let vim_markdown_preview_github=1 
 
