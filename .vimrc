@@ -190,3 +190,8 @@ let g:rainbow_active = 1
 " Get ack.vim to use 'ag'
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" Settings for nathanael/vim-indent-guides
+" let g:indent_guides_auto_colors = 0
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black   ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkslategrey ctermbg=4
+
