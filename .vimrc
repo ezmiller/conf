@@ -55,6 +55,12 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
+" Watch for changes in .vimrc
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
 " Toggles
 :nmap \l :setlocal number!<CR>
 :nmap \o :set paste!<CR>
