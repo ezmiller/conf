@@ -114,6 +114,10 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 " Settings for vim-markdown-preview
 let vim_markdown_preview_github=1 
 
+" Settings for whitespaces chars
+set listchars=tab:>♥,trail:♥,extends:>,precedes:<
+set list
+
 " Setting column marker past 80
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")
