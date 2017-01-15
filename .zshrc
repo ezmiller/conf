@@ -52,19 +52,7 @@ plugins=(git aws)
 export PATH="/Users/ethan/.composer/vendor/bin:/Users/ethan/.rbenv/shims:/usr/local/sbin:/usr/local/opt/php54/bin:/Users/ethan/packages/npm/node_modules/stylus/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/ethan-bin:/Users/ethan/.rbenv/shims:/usr/local/bin:/usr/local/opt/php54/bin:/Users/ethan/packages/npm/node_modules/stylus/bin:/usr/local/mysql/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/ethan-bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/opt/ImageMagick/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/ethan/.rvm/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/share/npm/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/ethan/.rvm/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/share/npm/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# setup MySQl path
-MYSQL=/usr/local/mysql/bin
-export PATH=$PATH:$MYSQL
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
 source $ZSH/oh-my-zsh.sh
-
-# For hub completions
-# https://github.com/github/hub/tree/master/etc
-fpath=(~/.zsh/completions $fpath) 
-autoload -U compinit && compinit
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/Cellar/php54-imagick/3.1.0RC2/imagick.so
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -90,10 +78,6 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/Cellar/php54-imagick/3.1.0RC2/imagic
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias git=hub
-alias vim=mvim
-alias start_collage="cd ~/Vagrants/scrapwalls && vagrant halt -f && vagrant up && vagrant ssh -c 'cd /vagrant && npm start'"
-alias stop_collage="cd ~/Vagrants/scrapwalls && vagrant halt -f"
 
 # added by travis gem
 [ -f /Users/ethan/.travis/travis.sh ] && source /Users/ethan/.travis/travis.sh
