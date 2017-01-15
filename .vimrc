@@ -74,6 +74,9 @@ augroup END
 :set noswapfile
 :set showcmd            " Show partial command in status line
 
+" Colors
+:set background=dark
+
 " Fonts
 highlight Comment cterm=italic
 
