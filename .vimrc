@@ -65,8 +65,8 @@ augroup END
 :nmap \l :setlocal number!<CR>
 :nmap \o :set paste!<CR>
 
-" Options
-:set number             " Line numbers on by default"
+" Misc Options
+:set number             " Line numbers on by default
 :set expandtab
 :set shiftwidth=2       " Number of spaces a tab counts for while editing"
 :set tabstop=2          " Sets tabs width"
