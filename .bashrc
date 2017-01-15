@@ -14,8 +14,8 @@ eval "$(pyenv init -)"
 export PATH=$PATH:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin:/User/ethan/local/bin:
 
 # For GIT autocompletion
-if [ -f ~/.git-completion.bash ]; then
-	  . ~/.git-completion.bash
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
 fi
 
 # configure prompt
