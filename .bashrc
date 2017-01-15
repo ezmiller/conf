@@ -7,6 +7,8 @@ export PATH="/usr/local/sbin:$PATH"
 # For Ruby & Ruby on Rails
 eval "$(rbenv init -)"
 
+# For pyenv
+eval "$(pyenv init -)"
 
 # PATH setting
 export PATH=$PATH:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin:/User/ethan/local/bin:
