@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 " General
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
