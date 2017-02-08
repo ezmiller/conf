@@ -120,7 +120,7 @@ set list
 
 " Setting column marker past 80
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
-let &colorcolumn="80,".join(range(120,999),",")
+let &colorcolumn="80,".join(range(160,999),",")
 
 " NERDTree
 nmap <silent> <C-T> :NERDTreeToggle<CR>
