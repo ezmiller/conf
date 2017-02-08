@@ -127,6 +127,12 @@ nmap <silent> <C-T> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
 " Settings for syntastic
+" let g:syntastic_javascript_eslint_generic = 1
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exec = '$(npm bin)/eslint'
+" let g:syntastic_javascript_eslint_exec = '[ -f $(npm bin)/eslint ] && $(npm bin)/eslint || eslint'
+" let g:syntastic_debug = 3
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
