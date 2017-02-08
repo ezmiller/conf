@@ -21,11 +21,8 @@ export PATH=$PATH:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/lo
 # Setup local user's bin
 export PATH=$PATH:~/local/bin:
 
-
 # For GIT autocompletion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # For hub completions
 # https://github.com/github/hub/tree/master/etc
