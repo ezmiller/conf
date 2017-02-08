@@ -36,8 +36,3 @@ autoload -U compinit && compinit
 # configure prompt
 PS1="\d \u@\h:\w $ "
 
-# added by travis gem
-[ -f /Users/ethan/.travis/travis.sh ] && source /Users/ethan/.travis/travis.sh
-
-export NVM_DIR="/Users/ethan/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
