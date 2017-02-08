@@ -29,6 +29,8 @@ export PATH=$PATH:~/local/bin:
 fpath=(~/usr/local/share/zsh-completions $fpath) 
 autoload -U compinit && compinit
 
+export NVM_DIR="/Users/ethan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # configure prompt
 PS1="\d \u@\h:\w $ "
