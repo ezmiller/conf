@@ -14,3 +14,11 @@
 		      git co ${2-master}; git mr ${1-develop}; git co ${3-production}; git mr ${2-master}; git co ${1-develop}; }; f"
 [push]
 	default = matching
+[core]
+	excludesfile = /Users/ethan/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
