@@ -114,7 +114,7 @@ nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
 " Settings for vim-markdown-preview
-let vim_markdown_preview_github=1 
+let vim_markdown_preview_github=1
 
 " Settings for whitespaces chars
 set listchars=tab:>♥,trail:♥,extends:>,precedes:<
