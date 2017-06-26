@@ -17,6 +17,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'severin-lemaignan/vim-minimap'
@@ -77,6 +78,7 @@ augroup END
 :set number
 
 " Colors
+set t_Co=256
 :set background=dark
 
 " Fonts
