@@ -22,6 +22,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'morhetz/gruvbox'
+Plugin 'sheerun/vim-polyglot'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -51,10 +53,19 @@ Plugin 'mxw/vim-jsx'
 Plugin 'godlygeek/tabular'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
+" Elm
+Plugin 'lambdatoast/elm.vim'
+" Plugin 'elmcast/elm-vim'
+
+
 " All Plugins must be added before this line.
 call vundle#end()
 syntax on
 filetype plugin indent on
+
+call plug#begin('~/.local/share/nvim/plugged')
+  Plug 'elmcast/elm-vim'
+call plug#end()
 
 " Watch for changes in .vimrc
 augroup myvimrc
@@ -80,6 +91,8 @@ augroup END
 " Colors
 set t_Co=256
 :set background=dark
+colorscheme gruvbox
+
 
 " Fonts
 highlight Comment cterm=italic
@@ -93,6 +106,12 @@ autocmd FileType jsx setlocal shiftwidth=2 tabstop=2 expandtab
 
 " For Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
+
+" For Elm
+let g:polyglot_disabled = ['elm']
+let g:elm_format_autosave = 1
+let g:elm_detailed_complete = 1
+let g:elm_syntastic_show_warnings = 1
 
 " For Misc other
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
@@ -170,6 +189,7 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
 " Settings for Ctrl-P plugin
+set wildignore+=*/unused-components/*,*.so,*.swp,*.zip
 " :let g:ctrlp_map = '<Leader>t'
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
