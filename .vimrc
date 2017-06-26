@@ -73,6 +73,8 @@ augroup END
 :set expandtab
 :set noswapfile
 :set showcmd            " Show partial command in status line
+:set relativenumber
+:set number
 
 " Colors
 :set background=dark
