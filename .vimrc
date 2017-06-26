@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
@@ -57,7 +58,6 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'lambdatoast/elm.vim'
 " Plugin 'elmcast/elm-vim'
 
-
 " All Plugins must be added before this line.
 call vundle#end()
 syntax on
@@ -92,7 +92,6 @@ augroup END
 set t_Co=256
 :set background=dark
 colorscheme gruvbox
-
 
 " Fonts
 highlight Comment cterm=italic
@@ -133,6 +132,10 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+" Settings for vim-ctrlspace
+set hidden
+set showtabline=0
 
 " Settings for vim-markdown-preview
 let vim_markdown_preview_github=1
@@ -222,6 +225,10 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " For airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#ctrlspace#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline_section_error  = ''
 let g:airline_section_warning = ''
