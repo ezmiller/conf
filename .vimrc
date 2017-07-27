@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'vim-ctrlspace/vim-ctrlspace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-airline/vim-airline'
@@ -191,17 +190,15 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-" Settings for Ctrl-P plugin
-set wildignore+=*/unused-components/*,*.so,*.swp,*.zip
-" :let g:ctrlp_map = '<Leader>t'
+" " Settings for Ctrl-P plugin
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
-" :let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 :let g:ctrlp_working_path_mode = 0
 :let g:ctrlp_dotfiles = 0
 :let g:ctrlp_switch_buffer = 0
 
 " Ignore some folders and files for CtrlP indexing
+set wildignore+=*/unused-components/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
@@ -224,11 +221,12 @@ let g:rainbow_active = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " For airline
+let g:airline_theme='jellybeans'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
+" let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#ctrlspace#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_skip_empty_sections = 1
 let g:airline_section_error  = ''
 let g:airline_section_warning = ''
