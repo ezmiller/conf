@@ -128,14 +128,6 @@ set mouse=a
 " Link clipboard to main buffer
 set clipboard=unnamed
 
-" Shortcuts for vim tabs
-set hidden " This allows buffers to be hidden if you've modified a buffer.
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
-nnoremap <leader>l :ls<CR>
-
 
 " Settings for vim-markdown-preview
 let vim_markdown_preview_github=1
@@ -191,6 +183,14 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
+" Basic Shortcuts for vim tabs
+" Note: Trying now not to use tabs in favor of buffers and switching btw
+" them using ctrl-p and buffergator.
+set hidden " This allows buffers to be hidden if you've modified a buffer.
+nnoremap <Tab> :tabnext<CR>
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
 " Settings for Ctrl-P plugin
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
@@ -224,23 +224,11 @@ if executable('ag')
 endif
 
 " Settings for buffergator
-
-" Use the right side of the screen
 let g:buffergator_viewport_split_policy = 'R'
-
-" I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
-
-" Looper buffers
 "let g:buffergator_mru_cycle_loop = 1
-
-" Go to the previous buffer open
-nmap <leader>jj :BuffergatorMruCyclePrev<cr>
-
-" Go to the next buffer open
-nmap <leader>kk :BuffergatorMruCycleNext<cr>
-
-" View the entire list of buffers open
+nmap <C-Left> :BuffergatorMruCyclePrev<cr>
+nmap <C-Right> :BuffergatorMruCycleNext<cr>
 nmap <leader>bl :BuffergatorOpen<cr>
 
 " Rainbow parentheses options
@@ -250,7 +238,7 @@ let g:rainbow_active = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " For airline
-let g:airline_theme='jellybeans'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#show_close_button = 0
