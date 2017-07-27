@@ -24,6 +24,7 @@ Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -77,6 +78,7 @@ augroup END
 :nmap \o :set paste!<CR>
 
 " Misc Options
+:let mapleader = ','
 :set number             " Line numbers on by default
 :set expandtab
 :set shiftwidth=2       " Number of spaces a tab counts for while editing"
@@ -127,14 +129,13 @@ set mouse=a
 set clipboard=unnamed
 
 " Shortcuts for vim tabs
+set hidden " This allows buffers to be hidden if you've modified a buffer.
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+nnoremap <leader>l :ls<CR>
 
-" Settings for vim-ctrlspace
-set hidden
-set showtabline=0
 
 " Settings for vim-markdown-preview
 let vim_markdown_preview_github=1
@@ -190,12 +191,20 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-" " Settings for Ctrl-P plugin
+" Settings for Ctrl-P plugin
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
 :let g:ctrlp_working_path_mode = 0
 :let g:ctrlp_dotfiles = 0
 :let g:ctrlp_switch_buffer = 0
+
+" Use leader for ctrl-p toggle.
+nmap <leader>p :CtrlP<cr>
+
+" Easy bindings for ctrl-p's various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
 
 " Ignore some folders and files for CtrlP indexing
 set wildignore+=*/unused-components/*,*.so,*.swp,*.zip
@@ -214,6 +223,26 @@ if executable('ag')
   :let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" Settings for buffergator
+
+" Use the right side of the screen
+let g:buffergator_viewport_split_policy = 'R'
+
+" I want my own keymappings...
+let g:buffergator_suppress_keymaps = 1
+
+" Looper buffers
+"let g:buffergator_mru_cycle_loop = 1
+
+" Go to the previous buffer open
+nmap <leader>jj :BuffergatorMruCyclePrev<cr>
+
+" Go to the next buffer open
+nmap <leader>kk :BuffergatorMruCycleNext<cr>
+
+" View the entire list of buffers open
+nmap <leader>bl :BuffergatorOpen<cr>
+
 " Rainbow parentheses options
 let g:rainbow_active = 1
 
@@ -223,7 +252,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " For airline
 let g:airline_theme='jellybeans'
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#switch_buffers_and_tabs = 0
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#fnamemod = ':t'
