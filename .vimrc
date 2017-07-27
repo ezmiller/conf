@@ -183,13 +183,16 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-" Basic Shortcuts for vim tabs
-" Note: Trying now not to use tabs in favor of buffers and switching btw
-" them using ctrl-p and buffergator.
 set hidden " This allows buffers to be hidden if you've modified a buffer.
+
+" These allow for switching and moving tabs, though I'm trying not to use
+" tabs in favor of buffers with ctrl-p and buffergator.
 nnoremap <Tab> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+" Replicate idea of closing a tab, closes buffer and moves to previous.
+nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Settings for Ctrl-P plugin
 :let g:ctrlp_match_window_bottom = 1
