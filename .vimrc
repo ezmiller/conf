@@ -198,7 +198,7 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
 :let g:ctrlp_working_path_mode = 0
-:let g:ctrlp_dotfiles = 0
+:let g:ctrlp_show_hidden = 1
 :let g:ctrlp_switch_buffer = 0
 
 " Use leader for ctrl-p toggle.
@@ -223,7 +223,7 @@ if executable('ag')
   set grepformat=%f:%l:%c%m
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  :let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  :let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 endif
 
 " Settings for buffergator
