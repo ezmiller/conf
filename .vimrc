@@ -187,6 +187,13 @@ map  N <Plug>(easymotion-prev)
 
 set hidden " This allows buffers to be hidden if you've modified a buffer.
 
+" Moving between windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <Tab> <C-w>w
+
 " These allow for switching and moving tabs, though I'm trying not to use
 " tabs in favor of buffers with ctrl-p and buffergator.
 nnoremap <Tab> :tabnext<CR>
