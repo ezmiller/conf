@@ -4,6 +4,7 @@
 export PATH="/Users/ethan/.composer/vendor/bin:/Users/ethan/.rbenv/shims:/usr/local/sbin:/usr/local/opt/php54/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/ethan-bin:/Users/ethan/.rbenv/shims:/usr/local/bin:/usr/local/opt/php54/bin:/usr/local/mysql/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/ethan-bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/opt/ImageMagick/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/ethan/.rvm/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin:/Users/ethan/.rvm/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/ethan/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/texbin"
 
 export EDITOR='nvim'
+export PATH=$PATH:/usr/bin/pbcopy
 # export PYTHONPATH=$PYTHONPATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
