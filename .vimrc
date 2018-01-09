@@ -88,6 +88,8 @@ augroup END
 :set showcmd            " Show partial command in status line
 :set relativenumber
 :set number
+:set splitright
+:set splitbelow
 
 " Colors
 set t_Co=256
