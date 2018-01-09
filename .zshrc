@@ -50,3 +50,6 @@ source $ZSH/oh-my-zsh.sh
 # Source the env file (holds aliases, exports, etc)
 source ~/conf/env.sh
 
+# For rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

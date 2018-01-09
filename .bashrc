@@ -35,3 +35,6 @@ export NVM_DIR="/Users/ethan/.nvm"
 # configure prompt
 PS1="\d \u@\h:\w $ "
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
