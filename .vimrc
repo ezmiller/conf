@@ -247,7 +247,7 @@ nmap <leader>bl :BuffergatorOpen<cr>
 let g:rainbow_active = 1
 
 " Get ack.vim to use 'ag'
-let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:ackprg = 'ag --nogroup --nocolor --column --ignore node_modules --ignore "-bundle.js"'
 
 " For airline
 let g:airline_theme='gruvbox'
