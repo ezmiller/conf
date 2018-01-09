@@ -49,7 +49,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'mxw/vim-jsx'
-" Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 " Markdown
 Plugin 'godlygeek/tabular'
