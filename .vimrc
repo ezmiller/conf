@@ -196,7 +196,7 @@ nnoremap <Tab> <C-w>w
 
 " These allow for switching and moving tabs, though I'm trying not to use
 " tabs in favor of buffers with ctrl-p and buffergator.
-nnoremap <Tab> :tabnext<CR>
+" nnoremap <Tab> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
