@@ -203,6 +203,9 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 " Replicate idea of closing a tab, closes buffer and moves to previous.
 nmap <leader>bq :bp <BAR> bd #<CR>
 
+" Open a new buffer
+nmap <leader>T :enew<CR>
+
 " Settings for Ctrl-P plugin
 :let g:ctrlp_match_window_bottom = 1
 :let g:ctrlp_match_window_reversed = 0
