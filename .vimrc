@@ -59,6 +59,10 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'lambdatoast/elm.vim'
 " Plugin 'elmcast/elm-vim'
 
+" Vue.js
+Plugin 'posva/vim-vue'
+Plugin 'sekel/vim-vue-syntastic'
+
 " All Plugins must be added before this line.
 call vundle#end()
 syntax on
