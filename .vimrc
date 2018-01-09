@@ -239,8 +239,8 @@ endif
 let g:buffergator_viewport_split_policy = 'R'
 let g:buffergator_suppress_keymaps = 1
 "let g:buffergator_mru_cycle_loop = 1
-nmap <C-Left> :BuffergatorMruCyclePrev<cr>
-nmap <C-Right> :BuffergatorMruCycleNext<cr>
+nmap <C-j> :BuffergatorMruCyclePrev<cr>
+nmap <C-k> :BuffergatorMruCycleNext<cr>
 nmap <leader>bl :BuffergatorOpen<cr>
 
 " Rainbow parentheses options
