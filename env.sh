@@ -21,6 +21,10 @@ eval "$(rbenv init -)"
 # For pyenv
 eval "$(pyenv init -)"
 
+# For android sdk
+ADB_PATH=/Users/ethan/Library/Android/sdk/platform-tools
+export PATH=$PATH:$ADB_PATH
+
 # MySQL
 MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
