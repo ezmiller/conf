@@ -129,8 +129,8 @@ autocmd Filetype sql setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 " Activate mouse in vim
-set ttyfast
-set mouse=a
+:set ttyfast
+:set mouse=a
 
 " Link clipboard to main buffer
 set clipboard=unnamed
