@@ -135,8 +135,7 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 :set mouse=a
 
 " Link clipboard to main buffer
-set clipboard=unnamed
-
+:set clipboard=unnamed
 
 " Settings for vim-markdown-preview
 let vim_markdown_preview_github=1
