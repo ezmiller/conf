@@ -257,7 +257,7 @@ let g:ackprg = "ag --nogroup --nocolor --column --ignore-dir unused-components -
 
 " For airline
 let g:airline_theme='gruvbox'
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_tab_nr = 0
