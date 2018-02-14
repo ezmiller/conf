@@ -53,3 +53,6 @@ source ~/conf/env.sh
 # For rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# For direnv
+eval "$(direnv hook zsh)"
