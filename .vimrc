@@ -25,6 +25,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'morhetz/gruvbox'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'wkentaro/conque.vim'
 Plugin 'roman/golden-ratio'
 
 " Git
