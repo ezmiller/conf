@@ -225,10 +225,10 @@ nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 
 " Ignore some folders and files for CtrlP indexing
-set wildignore+=*/unused-components/*,*.so,*.swp,*.zip
+set wildignore+=*.so,*.swp,*.zip,*/unused-components/*
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$',
   \ }
 
 " Use ag for :grep searches where possible, and then use it for CtrlP.
@@ -238,7 +238,7 @@ if executable('ag')
   set grepformat=%f:%l:%c%m
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  :let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+  :let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g "" --ignore unused-components'
 endif
 
 " Settings for buffergator
