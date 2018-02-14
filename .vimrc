@@ -112,7 +112,8 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType jsx setlocal shiftwidth=2 tabstop=2 expandtab
 
 " For Python
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4 autoindent
+
 
 " For Elm
 let g:polyglot_disabled = ['elm']
