@@ -75,3 +75,10 @@ alias enzo-up="(cd ~/Projects/motologic/enzo; tmux new -d -s enzo-dev -n 'docker
 
 # added by Anaconda3 5.1.0 installer
 export PATH="/Users/ethan/anaconda3/bin:$PATH"
+
+# For rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# For direnv
+eval "$(direnv hook zsh)"

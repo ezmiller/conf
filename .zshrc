@@ -16,15 +16,6 @@ if ! zgen saved; then
   zgen save
 fi
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
 # Source the env file (holds aliases, exports, etc)
 source ~/conf/env.sh
 
-# For rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# For direnv
-eval "$(direnv hook zsh)"
