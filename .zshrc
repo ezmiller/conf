@@ -1,11 +1,29 @@
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
+# if the init scipt doesn't exist
+if ! zgen saved; then
+
+  # specify plugins here
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/aws
+
+  # theme
+  zgen load subnixr/minimal
+
+  # generate the init script from plugins above
+  zgen save
+fi
+
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
+# ZSH_THEME="minimal"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -43,9 +61,9 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git aws)
+# plugins=(git aws)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # Source the env file (holds aliases, exports, etc)
 source ~/conf/env.sh

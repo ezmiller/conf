@@ -72,3 +72,6 @@ alias git=hub
 alias zshconfig="nvim ~/.zshrc"
 alias envconfig="nvim ~/conf/env.sh"
 alias enzo-up="(cd ~/Projects/motologic/enzo; tmux new -d -s enzo-dev -n 'docker' 'docker-compose up'; tmux neww -t enzo-dev:1 -n 'rails' 'sleep 20; REACT_ON_RAILS_ENV=HOT rails s -b 0.0.0.0 -e development_with_search'; tmux neww -t enzo-dev:2 -n 'webpack' 'HOT_RAILS_PORT=3500 npm run hot-assets'; tmux a -t enzo-dev)"
+
+# added by Anaconda3 5.1.0 installer
+export PATH="/Users/ethan/anaconda3/bin:$PATH"
