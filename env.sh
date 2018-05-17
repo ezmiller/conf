@@ -23,6 +23,7 @@ eval "$(rbenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # For android sdk
 ADB_PATH=/Users/ethan/Library/Android/sdk/platform-tools
